@@ -29,9 +29,6 @@ const Home = () => {
                 <article id={`post-${restData.id}`}>
                     <div className="entry-content" dangerouslySetInnerHTML={{__html:restData.content.rendered}}>
                     </div>
-                <div className="entry-content">
-                </div>
-
                 <div class="wrapper-button">
                <a><Link to={`/works/`} class="home-button">View My Work </Link></a> 
                </div>

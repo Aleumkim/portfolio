@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import Loading from './Loading'
 
+
 const About = () => {
     const restPath = 'http://localhost:8888/ak-portfolio/wp-json/wp/v2/pages/97?_embed'
     const [restData, setData] = useState([])
@@ -23,15 +24,26 @@ const About = () => {
     return (
         <>
         { isLoaded ?
-            <article id={`post-${restData.id}`}>
-                <div className="entry-content" dangerouslySetInnerHTML={{__html:restData.content.rendered}}>
+            
+            <article class="about" id={`post-${restData.id}`}>
+                
+               <div class="headshot">
                 </div>
+                <section class="about-section">
+                <h1 class="about-title">Hi, I'm Aleum.</h1>
+                <p><div className="entry-content" dangerouslySetInnerHTML={{__html:restData.content.rendered}}>
+                </div></p>
+                </section>
             </article>
         : 
             <Loading />
         }
+   
+ 
         </>
+        
     )
+
 }
 
 export default About
