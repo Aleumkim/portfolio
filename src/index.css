@@ -5,6 +5,8 @@ html {
 	font-family: sans-serif;
 	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust:     100%;
+	/* background-image: url('back.jpg');
+	background-size: 100%; */
 }
 
 body {
@@ -14,6 +16,7 @@ body {
 html, 
 body {
     height: 100%;
+
 }
 article,
 aside,
@@ -243,7 +246,7 @@ h6 {
 
 .site-header {
 	text-align: center;
-	background-color: black;
+  /* background-image: url('back.jpg'); */
 	padding: 0 1.25rem;
 }
 
@@ -314,7 +317,13 @@ big {
 }
 
 .has-text-align-left {
-	color:red;
+	background-color: #ff4cff 0;
+	background-image: linear-gradient(45deg, #ff4cff 0, #ff813d);
+	background-size: 100%;
+	-webkit-background-clip: text;
+	-moz-background-clip: text;
+	-webkit-text-fill-color: transparent; 
+	-moz-text-fill-color: transparent;
 }
  /*AK styling*/
 .entry-content {
@@ -328,7 +337,7 @@ big {
 
 .home-button {
 	border-radius: 10px;
-	background-color: red;
+	background-color: #ff4cff;
 	padding: 15px;
 
 
@@ -348,9 +357,12 @@ html {
 }
 
 body {
-	background: url('images/bak.jpeg'); /* Fallback for when there is no custom background color defined. */
+	 /* Fallback for when there is no custom background color defined. */
 	min-height: 100vh;
 	width: 100%;
+	background-image: url('back.jpg');
+
+	
 }
 
 blockquote:before,
@@ -423,11 +435,11 @@ table {
 # Links
 --------------------------------------------------------------*/
 a {
-	color: white;
+	color: #fafafa;
 }
 
 a:visited {
-	color: white;
+	color: #fafafa;
 }
 
 a:hover,
@@ -544,7 +556,7 @@ a:active {
 }
 
 #root {
-	background: black;
+ /* background-image: url('back.jpg'); */
 	margin: 1.25rem auto;
 	max-width: 960px;
 	/* height: 1000px; */
@@ -553,7 +565,9 @@ a:active {
 #main {
 	padding: 1.25rem;
 	margin: 0 auto;
-    min-height: 18.75rem;
+  min-height: 18.75rem;
+	/* background-image: url('back.jpg'); */
+		/* background-size: 100%; */
 }
 
 #main article {
@@ -577,12 +591,27 @@ a:active {
 .site-navigation ul {
 	list-style: none;
 	margin: 0;
-	padding: 0 1.25rem 1rem;
-	text-align: left;
+	text-align: center;
 	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-evenly;
+	flex-direction: row;
+	justify-content:space-evenly;
 }
+
+.site-navigation h3 {
+	position: relative;
+	bottom:30px;
+	font-family: 'brandon grotesque';
+	font-size: 18px;
+	background-color: #ff4cff 0;
+	background-image: linear-gradient(45deg, #ff4cff 0, #ff813d);
+	/* background-size: 100%; */
+	-webkit-background-clip: text;
+	-moz-background-clip: text;
+	-webkit-text-fill-color: transparent; 
+	-moz-text-fill-color: transparent;
+	
+}
+
 
 .site-navigation a {
 	display: block;
@@ -590,9 +619,10 @@ a:active {
 }
 
 footer {
-
+	margin-top: 78px;
+	background: Pink;
 	padding: 1.25rem;
-	background-color: skyblue;
+	background: #222;
 }
 
 footer p {
@@ -626,4 +656,6 @@ footer p {
 --------------------------------------------------------------*/
 .icon {
 	display: flex;
+	position: relative;
+	top:70px;
 }

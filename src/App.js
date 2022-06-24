@@ -31,10 +31,10 @@ function App() {
           </div>
           <nav className="site-navigation">
             <ul>
-              <li><Link to='/'>Home</Link></li>
-              <li><Link to='/about'>About</Link></li>
-              <li><Link to='/works'>Works</Link></li>
-              <li><Link to='/contact'>Contact</Link></li>
+              <h3><li><Link to='/'>Home</Link></li></h3>
+              <h3><li><Link to='/about'>About</Link></li></h3>
+              <h3><li><Link to='/works'>Works</Link></li></h3>
+              <h3><li><Link to='/contact'>Contact</Link></li></h3>
             </ul>
           </nav>
         </header>
