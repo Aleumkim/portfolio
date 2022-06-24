@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/wp-react/static/css/main.2a2160ee.css",
+    "main.js": "/wp-react/static/js/main.a383de4f.js",
+    "static/js/787.4ee464ce.chunk.js": "/wp-react/static/js/787.4ee464ce.chunk.js",
+    "index.html": "/wp-react/index.html",
+    "main.2a2160ee.css.map": "/wp-react/static/css/main.2a2160ee.css.map",
+    "main.a383de4f.js.map": "/wp-react/static/js/main.a383de4f.js.map",
+    "787.4ee464ce.chunk.js.map": "/wp-react/static/js/787.4ee464ce.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2a2160ee.css",
+    "static/js/main.a383de4f.js"
+  ]
+}
