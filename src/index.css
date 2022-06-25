@@ -108,11 +108,73 @@ img {
 svg:not(:root) {
 	overflow: hidden;
 }
+.works {
+	width: 100%;
+	min-height: 400px;
+	background-size: cover;
+	background-blend-mode:lighten;
+	transition: opacity .2s;
+	position:relative;
+	bottom:70px;
+}
+#post-77  {
+	background-image: linear-gradient(30deg,#ff4cff 0,#ff813d 100%),
+	url('female.jpg');
 
-figure {
-	margin: 1em 40px;
+}
+#post-77:hover {
+	background-image:
+	url('female.jpg');
+}
+.works-title {
+	display: block;
+	text-align: center;
+	position: relative;
+	color:#222;
+	top:150px;
+	transition: text-shadow .2s;
+	font-size: 2.5em;
+}
+#post-68  {
+	background-image: linear-gradient(30deg,#ff4cff 0,#ff813d 100%),
+	url('react.jpg');
+}
+#post-68:hover {
+	background-image:
+	url('react.jpg');
+}
+#post-86  {
+	background-image: linear-gradient(30deg,#ff4cff 0,#ff813d 100%),
+	url('rep.jpg');
+}
+#post-86:hover {
+	background-image:
+	url('rep.jpg');
 }
 
+#post-84  {
+	background-image: linear-gradient(30deg,#ff4cff 0,#ff813d 100%),
+	url('mindset.jpg');
+}
+#post-84:hover {
+	background-image:
+	url('mindset.jpg');
+}
+
+
+
+#post-77 img{
+	display: none;
+}
+#post-68 img{
+	display: none;
+}
+#post-86 img{
+	display: none;
+}
+#post-84 img{
+	display: none;
+}
 hr {
 	box-sizing: content-box;
 	height: 0;
@@ -338,6 +400,7 @@ big {
 }
 .about-title {
 	font-family: 'Inconsolata', monospace;
+	font-weight: 200;
 	text-align: center;
 }
 .about-section p {
@@ -450,7 +513,7 @@ img {
 }
 
 figure {
-	margin: 1em 0; /* Extra wide images within figure tags don't overflow the content area. */
+/* Extra wide images within figure tags don't overflow the content area. */
 }
 
 table {
@@ -654,7 +717,7 @@ footer p {
 .copyright {
 	font-family: 'brandon grotesque';
 	font-weight: bold;
-	padding: 1.25rem;
+	padding: 4.25rem;
 	font-size: 1rem;
 	text-align: center;
 	background-color: #ff4cff 0;
@@ -691,12 +754,20 @@ footer p {
 	position: relative;
 }
 
-#post-8 {
-	text-align: center;
-	background-image: url('back.jpg');
-
+.contact-heading {
+	font-family: 'Inconsolata', monospace;
 }
+
 .contact-p {
+	color:black;
+	font-size: 1.3em;
+	font-family: 'Inconsolata', monospace;
+	font-weight: 500;
+} 
+
+.total-contact {
+	text-align: center;
+	align-items: center;
 	background-image: url('back.jpg');
-	padding-bottom:320px;
+	height:420px;
 }

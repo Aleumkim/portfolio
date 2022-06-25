@@ -38,9 +38,21 @@ const Home = () => {
             <article id={`post-${restData.id}`}>
             <div className="entry-content" dangerouslySetInnerHTML={{__html:restData.content.rendered}}>
             </div>
-             <section>
-             <h1>{restData.acf.contact_heading}</h1>
+             <section class="total-contact">
+             <h1 class="contact-heading">{restData.acf.contact_heading}</h1>
              <p class="contact-p">{restData.acf.contact_content}</p>
+             <a href="https://www.linkedin.com/feed/" target="_blank" rel="noreferrer">
+          <img
+            src="linked.png"
+            alt="example"
+          />
+                 <a href="https://github.com/" target="_blank" rel="noreferrer">
+          <img
+            src="github.png"
+            alt="example"
+          />
+        </a>
+        </a>
             </section>
             </article>
 
@@ -49,20 +61,6 @@ const Home = () => {
             <Loading />
         }
 
-         <a href="https://www.linkedin.com/feed/" target="_blank" rel="noreferrer">
-          <img
-            src="linked.png"
-            alt="example"
-          />
-        </a>
-
-        
-        <a href="https://github.com/" target="_blank" rel="noreferrer">
-          <img
-            src="github.png"
-            alt="example"
-          />
-        </a>
         </>   
     )
   
