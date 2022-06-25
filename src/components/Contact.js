@@ -40,7 +40,7 @@ const Home = () => {
             </div>
              <section>
              <h1>{restData.acf.contact_heading}</h1>
-             <p>{restData.acf.contact_content}</p>
+             <p class="contact-p">{restData.acf.contact_content}</p>
             </section>
             </article>
 

@@ -368,7 +368,6 @@ big {
 	background-color: #ff4cff;
 	padding: 15px;
 
-
 }
 
 /*--------------------------------------------------------------
@@ -655,7 +654,6 @@ footer p {
 .copyright {
 	font-family: 'brandon grotesque';
 	font-weight: bold;
-	margin-top: 78px;
 	padding: 1.25rem;
 	font-size: 1rem;
 	text-align: center;
@@ -691,5 +689,14 @@ footer p {
 .icon {
 	display: flex;
 	position: relative;
-	top:70px;
+}
+
+#post-8 {
+	text-align: center;
+	background-image: url('back.jpg');
+
+}
+.contact-p {
+	background-image: url('back.jpg');
+	padding-bottom:320px;
 }
