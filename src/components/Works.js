@@ -33,7 +33,7 @@ const Works = ( {featuredImage} ) => {
                         }
                         {/* <p> by: {post._embedded['author'][0].name }</p> */}
                         
-                        <div className="entry-content" dangerouslySetInnerHTML={{__html:post.content.rendered}}></div>
+                        {/* <div className="entry-content" dangerouslySetInnerHTML={{__html:post.content.rendered}}></div> */}
                         {/* <p>Category: {post._embedded['wp:term'][0][0].name}</p> */}
                     </div>
                 )}

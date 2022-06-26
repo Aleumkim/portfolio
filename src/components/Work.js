@@ -28,12 +28,12 @@ const Post = ({featuredImage}) => {
         <>
         { isLoaded ?
             <>
-                <article id={`post-${restData.id}`}>
+                <article class="single-work" id={`post-${restData.id}`}>
                     
-                {restData._embedded['wp:featuredmedia'][0] &&
+                {/* {restData._embedded['wp:featuredmedia'][0] &&
                             <figure className="featured-image" dangerouslySetInnerHTML={featuredImage(restData._embedded['wp:featuredmedia'][0])}></figure>
                         }
-                 
+                  */}
                     <h1>{restData.title.rendered}</h1>
                     <div className="entry-content" dangerouslySetInnerHTML={{__html:restData.content.rendered}}></div>
                  
