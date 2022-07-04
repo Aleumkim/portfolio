@@ -5,6 +5,10 @@ import About from './components/About'
 import Contact from './components/Contact'
 import Works from './components/Works'
 import Work from './components/Work'
+import Work1 from './components/Work1'
+import Work2 from './components/Work2'
+import Work3 from './components/Work3'
+
 
 
 function App() {
@@ -44,12 +48,15 @@ function App() {
             <Route path='/' element={<Home />} />
             <Route path='/about' element={<About />} />
             <Route path='/works' element={<Works featuredImage={featuredImage}/>} />
-            <Route path='/work/:id' element={<Work featuredImage={featuredImage} />} />
+            <Route path='/work/77' element={<Work featuredImage={featuredImage} />} />
+            <Route path='/work/68' element={<Work1 featuredImage={featuredImage} />} />
+            <Route path='/work/86' element={<Work2 featuredImage={featuredImage} />} />
+            <Route path='/work/84' element={<Work3 featuredImage={featuredImage} />} />
             <Route path='/contact' element={<Contact />} />
           </Routes>
         </main>
-        <footer>
-				  <p className="copyright">Created by <a href="https://wp.bcitwebdeveloper.ca/">Aleum Kim</a>.</p>
+        <footer className='footer'>
+				  <p className="copyright"><a href="https://wp.bcitwebdeveloper.ca/"> Created by Aleum Kim</a>.</p>
         </footer>
       </Router>
   );

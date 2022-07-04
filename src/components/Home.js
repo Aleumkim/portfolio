@@ -1,9 +1,14 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import Loading from './Loading'
+import atom from '../img/atom.png'
+import js from '../img/js.png'
+import php from '../img/php.png'
+import press from '../img/press-release.png'
+import sort from '../video/sort.mp4'
 
 const Home = () => {
-    const restPath = 'http://localhost:8888/ak-portfolio/wp-json/wp/v2/pages/13?_embed'
+    const restPath = 'https://aleumkim.com/ak-portfolio/wp-json/wp/v2/pages/13?_embed'
     const [restData, setData] = useState([])
     const [isLoaded, setLoadStatus] = useState(false)
 
@@ -29,56 +34,62 @@ const Home = () => {
                 <article id={`post-${restData.id}`}>
                     <div className="entry-content" dangerouslySetInnerHTML={{__html:restData.content.rendered}}>
                     </div>
+                   
                 <div class="wrapper-button">
                <a><Link to={`/works/`} class="home-button">View My Work </Link></a> 
                </div>
-                </article>
+              </article>
                 
                 
         : 
             
-            <Loading />
             
-        }
-
- 
+            <Loading />
          
+            
+              }
 
-        <div class="icon">
-        <a href="https://www.linkedin.com/feed/" target="_blank" rel="noreferrer">
+          <section class="icon">
+          <a href="https://www.linkedin.com/feed/" target="_blank" rel="noreferrer">
+           <img
+           src={atom}
+           alt="example"
+         />
+         </a>
+          
+          <a href="https://github.com/" target="_blank" rel="noreferrer">
           <img
-            src="atom.png"
+             src={js}
+             alt="example"
+          />
+          </a>
+
+          <a href="https://github.com/" target="_blank" rel="noreferrer">
+          <img
+            src={php}
             alt="example"
           />
         </a>
 
         <a href="https://github.com/" target="_blank" rel="noreferrer">
           <img
-            src="php.png"
+            src={press}
             alt="example"
           />
         </a>
 
-        
-        <a href="https://github.com/" target="_blank" rel="noreferrer">
-          <img
-            src="js.png"
-            alt="example"
-          />
-        </a>
+        </section>
+    
+
 
         
-        <a href="https://github.com/" target="_blank" rel="noreferrer">
-          <img
-            src="press-release.png"
-            alt="example"
-          />
-        </a>
-        </div>
-        
+    
 
+        
+     
+     
        
-
+    
         </>   
     )
   

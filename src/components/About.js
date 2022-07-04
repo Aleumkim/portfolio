@@ -3,7 +3,7 @@ import Loading from './Loading'
 
 
 const About = () => {
-    const restPath = 'http://localhost:8888/ak-portfolio/wp-json/wp/v2/pages/97?_embed'
+    const restPath = 'https://aleumkim.com/ak-portfolio/wp-json/wp/v2/pages/97?_embed'
     const [restData, setData] = useState([])
     const [isLoaded, setLoadStatus] = useState(false)
 
@@ -25,16 +25,15 @@ const About = () => {
         <>
         { isLoaded ?
             
-            <article class="about" id={`post-${restData.id}`}>
+            <section class="about" id={`post-${restData.id}`}>
                 
-               <div class="headshot">
-                </div>
-                <section class="about-section">
+               <div class="headshot"/>
+           
+                <div class="about-section">
                 <h1 class="about-title">Hi, I'm Aleum.</h1>
-                <p><div className="entry-content" dangerouslySetInnerHTML={{__html:restData.content.rendered}}>
-                </div></p>
-                </section>
-            </article>
+                <p className="about-description" dangerouslySetInnerHTML={{__html:restData.content.rendered}}/>
+                </div>
+            </section>
         : 
             <Loading />
         }

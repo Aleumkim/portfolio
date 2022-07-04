@@ -3,7 +3,7 @@ import Loading from './Loading'
 import { Link } from 'react-router-dom'
 
 const Home = () => {
-    const restPath = 'http://localhost:8888/ak-portfolio/wp-json/wp/v2/pages/8?_embed'
+    const restPath = 'https://aleumkim.com/ak-portfolio/wp-json/wp/v2/pages/8?_embed'
     const [restData, setData] = useState([])
     const [isLoaded, setLoadStatus] = useState(false)
 

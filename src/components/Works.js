@@ -27,10 +27,10 @@ const Works = ( {featuredImage} ) => {
             <>
                 {restData.map(post => 
                     <div class="works" key={post.id} id={`post-${post.id}`}>
-                        <Link to={`/work/${post.id}`}><h2 class="works-title">{post.title.rendered}</h2></Link>
-                        {post._embedded['wp:featuredmedia'][0] &&
+                        <Link to={`/Work/${post.id}`}><h2 class="works-title">{post.title.rendered}</h2></Link>
+                        {/* {post._embedded['wp:featuredmedia'][0] &&
                             <figure className="featured-image" dangerouslySetInnerHTML={featuredImage(post._embedded['wp:featuredmedia'][0])}></figure>
-                        }
+                        } */}
                         {/* <p> by: {post._embedded['author'][0].name }</p> */}
                         
                         {/* <div className="entry-content" dangerouslySetInnerHTML={{__html:post.content.rendered}}></div> */}

@@ -14,8 +14,10 @@ body {
     height: 100%;
 		margin: 0;
 		background-color: black;
-
+		--nav-load-time: 300ms;
+		--nav-link-load-time: 500ms;
 }
+
 article,
 aside,
 details,
@@ -37,6 +39,8 @@ progress,
 video {
 	display: inline-block;
 	vertical-align: baseline;
+		width: 70%;
+		height: auto;
 }
 
 audio:not([controls]) {
@@ -107,70 +111,6 @@ img {
 
 svg:not(:root) {
 	overflow: hidden;
-}
-.works {
-background-image: linear-gradient(30deg, #8EC5FC 0%, #E0C3FC 100%);
-
-	/* background-image: linear-gradient(30deg,#ff4cff 0,#ff813d 100%); */
-	width: 100%;
-	min-height: 400px;
-	background-size: cover;
-	background-blend-mode:lighten;
-	transition: opacity .2s;
-	position:relative;
-	bottom:70px;
-}
-
-#post-77:hover {
-		background-image: 
-	url('woo.png');
-}
-.single-work {
-	pointer-events: none;
-}	
-.works-title {
-	text-align: center;
-	position: relative;
-	color:palegoldenrod;
-	top:150px;
-	font-size: 2.5em;
-}
-#post-68  {
-
-}
-#post-68:hover {
-	background-image:
-	url('react.jpg');
-}
-
-#post-86:hover {
-	background-image:
-	url('rep.jpg');
-}
-
-
-#post-84:hover {
-	background-image:
-	url('mindset.jpg');
-}
-
-
-
-#post-77 img{
-	display: none;
-}
-#post-68 img{
-	display: none;
-}
-#post-86 img{
-	display: none;
-}
-#post-84 img{
-	display: none;
-}
-hr {
-	box-sizing: content-box;
-	height: 0;
 }
 
 pre {
@@ -299,7 +239,6 @@ h6 {
 
 .site-header {
 	text-align: center;
-  /* background-image: url('back.jpg'); */
 	padding: 0 1.25rem;
 }
 
@@ -369,6 +308,92 @@ big {
 	font-size: 125%;
 }
 
+/*header AK stuff*/
+
+.site-navigation ul {
+	list-style: none;
+	margin: 0;
+	text-align: center;
+	display: flex;
+	flex-direction: row;
+	justify-content:space-evenly;
+}
+
+.site-navigation li:hover {
+	background-color:#ffffff44;
+}
+
+/*Works Page AK*/
+.works {
+	background-image: linear-gradient(30deg, #8EC5FC 0%, #E0C3FC 100%);
+	width: 100%;
+	min-height: 400px;
+	background-size: cover;
+	background-blend-mode:lighten;
+	position:relative;
+	bottom:70px;
+}
+
+#post-77:hover {
+		background-image: 
+	url('woo.png');
+}
+.single-work {
+	pointer-events: none;
+}	
+.works-title {
+	text-align: center;
+	position: relative;
+	color:palegoldenrod;
+	top:150px;
+	font-size: 2.5em;
+	overflow: hidden;
+}
+
+#post-68:hover {
+	background-image:
+	url('react.jpg');
+}
+
+#post-86:hover {
+	background-image:
+	url('rep.jpg');
+}
+
+#post-84:hover {
+	background-image:
+	url('typing.jpg');
+}
+
+#post-77 img{
+	display: none;
+}
+#post-68 img{
+	display: none;
+}
+#post-86 img{
+	display: none;
+}
+#post-84 img{
+	display: none;
+}
+
+.work-content {
+	text-align: center;
+}
+.work-content h4 {
+	position: relative;
+	bottom:30px;
+	margin-top: 10px;
+	font-size: 2rem;
+}
+.work-content p {
+	position: relative;
+	bottom:30px;
+}
+
+/*Home page styling AK*/
+
 .has-text-align-left {
 	background-color: #ff4cff 0;
 	background-image: linear-gradient(45deg, #ff4cff 0, #ff813d);
@@ -379,29 +404,56 @@ big {
 	-moz-text-fill-color: transparent;
 	font-size: 1.8rem;
 }
- /*AK styling*/
+ /* About AK styling*/
  .headshot {
-	background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%)
-	,url('female.jpg');
-	
-    width: 100%;
-		min-height: 350px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-blend-mode: hard-light;
-    margin-bottom: 3em;
+		/* background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%) */
+			background-image: url('favicon.png') ;
+			background-size: 140%;
+			background-position: center;
+			width: 100%;
+			min-height: 350px;
+
 }
+
 .about-title {
-	font-family: 'Inconsolata', monospace;
-	font-weight: 200;
-	text-align: center;
+		font-family: 'Inconsolata', monospace;
+		font-weight: 200;
+		text-align: center;
+		animation: article-load 3000ms ease-in var(--article-load-delay) infinite;
+		animation-fill-mode: forwards;
+		transform: translate(-20px);
+		opacity: 0;
+		margin-top:10px;
+}
+@keyframes article-load	{
+	0% {
+		transform: translate(-10px);
+		opacity: 0;
+	}
+	100% {
+		transform: translate(0px);
+		opacity: 1;
+	}
 }
 .about-section p {
+	color: black;
 	position: relative;
-	top:40px;
 	text-align: center;
 	font-size: 1.3em;
-	font-family: 'Indie Flower', cursive;
+	font-family: 'Inconsolata', monospace;
+	animation: article-load 3000ms ease-in calc(var(--article-load-delay) +200ms);
+	animation-fill-mode: forwards;
+	background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%)
+}
+@keyframes article-load	{
+	0% {
+		transform: translate(-10px);
+		opacity: 0;
+	}
+	100% {
+		transform: translate(0px);
+		opacity: 1;
+	}
 }
 
 .entry-content {
@@ -414,17 +466,27 @@ big {
 	font-size: 3em;
 }
 
+/*home page view button AK*/
 .wrapper-button {
 	text-align: center;
 	margin-top:25px;
+	outline:none;
 }
 
 .home-button {
 	border-radius: 10px;
 	background-color: #ff4cff;
 	padding: 15px;
-
+	box-shadow: inset 0 0 0 0 #f9e506;
+	transition: ease-out 2s;
+	text-decoration: none;
 }
+
+.home-button:hover {
+
+	box-shadow: inset 300px 0 0 0 #ff813d;
+}
+
 
 /*--------------------------------------------------------------
 # Elements
@@ -444,7 +506,9 @@ body {
 	min-height: 100vh;
 	width: 100%;
 	/* background-image: url('back.jpg'); */
-
+	--nav-load-time: 500ms;
+	--nav-link-load-time: 500ms;
+	--article-load-delay: calc(var(--nav-load-time) + var(--nav-link-load-time));
 	
 }
 
@@ -460,12 +524,6 @@ q {
 	quotes: "" "";
 }
 
-hr {
-	background-color: black;
-	border: 0;
-	height: 1px;
-	margin-bottom: 1.5em;
-}
 
 ul,
 ol {
@@ -478,8 +536,9 @@ p + ol {
 	margin: -1em 0 1.5em 3em;
 }
 
+/*not display ul dot in React Tabo*/
 ul {
-	list-style: disc;
+	list-style-type: '';
 }
 
 ol {
@@ -671,15 +730,131 @@ a:active {
 	background-color: black;
 }
 
-.site-navigation ul {
-	list-style: none;
-	margin: 0;
-	text-align: center;
-	display: flex;
-	flex-direction: row;
-	justify-content:space-evenly;
+
+
+/* Contact Styling */
+
+.contact-heading {
+	font-family: 'Inconsolata', monospace;
+	color:black;
 }
 
+.contact-p {
+	color:black;
+	font-size: 1.3em;
+	font-family: 'Inconsolata', monospace;
+	font-weight: 500;
+} 
+
+.total-contact {
+	text-align: center;
+	align-items: center;
+	background-image: url('back.jpg');
+	height:420px;
+}
+.total-contact img:hover {
+	background-color:gray;
+}
+
+/*Tablet version AK*/
+
+@media (min-width:768px)  {
+	/*header stuff*/
+	.site-navigation ul {
+		font-size: 25px;
+		justify-content:flex-end;
+		margin-left: 200px;
+	}
+		/*hompage content animation stuff*/
+	.has-text-align-left {
+		display: block;
+		margin-top:130px;
+		font-size: 50px;
+		animation-name: icon_ani;
+		animation-duration: 2s;
+		animation-iteration-count: infinite;
+	}
+
+	@keyframes icon_ani {
+		from {
+		margin-left: 0;
+		}
+		to {
+		margin-right: 400px;
+		}
+	}
+	.entry-content h1, .entry-content h2 {
+		animation-name: heading_ani;
+		animation-duration: 2s;
+		animation-iteration-count: infinite;
+	}
+	@keyframes heading_ani {
+		from {
+		margin-right: 0;
+		}
+		to {
+		margin-left: 400px;
+		}
+	}
+
+	#post-13 {
+		margin-top: 50px;
+	}
+	/*button animation stuff*/
+	.home-button {
+		border-radius: 20px;
+		background-color: #ff4cff;
+		padding: 35px;
+		font-size: 30px;
+		text-decoration: none;
+	}
+		/*Hompage image link AK*/
+	.icon {
+		display: block;
+		position: relative;
+  	width: 80%;
+  	margin: 0 auto 0 auto;
+		margin-top:150px;
+}
+	/*about AK*/ 
+	.about {
+		display: grid;
+		grid-template-rows: 1fr;
+		grid-template-columns: 1fr 1fr;
+		margin-bottom:10px;
+	}
+	.headshot {
+		display: block;
+		height: 100%;
+		width: 220%;
+		position: relative;
+		right:280px;
+	}
+	.about-description {
+		position: relative;
+		font-size: 1.2rem;
+		padding-bottom: 10px;
+		background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%)
+	}
+	.tab-div {
+		display: grid;
+		grid-template-rows: 1fr;
+		grid-template-columns: 1fr 1fr;
+	}
+	/*footer AK*/
+	.copyright a {
+		font-size: 30px;
+	}
+
+	/* contact */
+	.total-contact {
+		background-size: 100%;
+	}
+	.total-contact p {
+		font-size: 33px;
+	}
+}
+/* header a text styling */
 .site-navigation h3 {
 	position: relative;
 	bottom:30px;
@@ -696,17 +871,14 @@ a:active {
 	
 }
 
-
 .site-navigation a {
 	display: block;
 	padding: 1rem;
 }
 
-
 footer p {
 	margin: 0;
 }
-
 .copyright {
 	font-family: 'brandon grotesque';
 	font-weight: bold;
@@ -739,29 +911,76 @@ footer p {
 	object-fit: cover;
 }
 
-/*--------------------------------------------------------------
-# Icon
---------------------------------------------------------------*/
+
 .icon {
 	display: flex;
 	position: relative;
 }
 
-.contact-heading {
-	font-family: 'Inconsolata', monospace;
-}
 
-.contact-p {
-	color:black;
-	font-size: 1.3em;
-	font-family: 'Inconsolata', monospace;
-	font-weight: 500;
-} 
 
-.total-contact {
-	text-align: center;
+/*--------------------------------------------------------------
+# React Tabs Styling
+--------------------------------------------------------------*/
+.react-tabs__tab-list{
+	display: flex;
+	flex-direction: row;
 	align-items: center;
-	background-image: url('back.jpg');
-	height:420px;
+	justify-content: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+.react-tabs {
+	align-items: center;
+	justify-content: center;
+}
+.tab-content {
+	text-align: center;
+}
+.tab-content p {
+	margin-top: 30px;
 }
 
+.react-tabs__tab button{
+	margin: 10px;
+	padding: 10px;
+	border: 1px solid  #8EC5FC;
+	background-color: #8EC5FC 0;
+	background-image: linear-gradient(30deg, #8EC5FC 0%, #E0C3FC 100%);
+	color:black;
+	animation-name: tab_ani;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+}
+.react-tabs__tab button:hover {
+	color: white;
+}
+.live-tab {
+	position: relative;
+	bottom:60px;
+	padding: 20px 20px;
+	text-align: center;
+	background: skyblue;
+	border-radius: 25px;
+	overflow: hidden;
+	border-radius: 20px;
+}
+
+.live-tab a {
+	padding:10px;
+	font-size: 1.4rem;
+	background-color: #ff4cff 0;
+	background-image: linear-gradient(45deg, #ff4cff 0, #ff813d);
+	/* background-size: 100%; */
+	-webkit-background-clip: text;
+	-moz-background-clip: text;
+	-webkit-text-fill-color: transparent; 
+	-moz-text-fill-color: transparent;
+}
+
+@media (min-width:1024px) {
+	.headshot {
+		position: relative;
+		right:400px;
+	}
+}
