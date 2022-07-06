@@ -59,7 +59,7 @@ const Post = ({featuredImage}) => {
                 <Tabs className="Tabs">
                 <TabList>
                     <Tab><button>Mockups</button></Tab>
-                    <Tab><button>Wireframe</button></Tab>
+                    {/* <Tab><button>Wireframe</button></Tab> */}
                     <Tab><button>SetUp</button></Tab>
                 </TabList>
 
@@ -67,48 +67,48 @@ const Post = ({featuredImage}) => {
                     <h1> The Navigation Header </h1>
                     <div class="tab-div">
                     <video width="470" height="200" autoPlay loop muted><source src={moviedata} type="video/mp4"/></video>
-                    <p>This shows the different types of pages on the webssite through the navigation. On mobile the navigation is a slider which flexes into a row when hitting the desktop point. The navigation is also accessible on a fixed footer making it easier for usability especially in mobile</p>
+                    <p>This shows the different types of pages on the website through the navigation. On mobile we added a navigation in the footer in order for the user to be able to easily access the navigation instead of scrolling to the top of the webpage.</p>
                     </div>
 
                     <h1> The Single Page </h1>
                     <div class="tab-div">
                     <video width="470" height="200" autoPlay loop muted><source src={singledata} type="video/mp4"/></video>
-                    <p>The Single page can be accessed from the home page from hovering over a movie and clicking on the more info. The Single page shows the movies hero image, the rating, the overview, and the genre for the movie. The API allows for the correct picture, rating, and genre to be matched with each movie</p>
+                    <p>The Single page can be accessed from the home page from hovering over a movie and clicking on the more info. The Single page shows the movies hero image, the rating, the overview, and the genre for the movie. The API allows for the correct picture, rating, and genre to be matched with each movie.</p>
                     </div>
 
                     <h1> The Favourites Feature </h1>
                     <div class="tab-div">
                     <video width="470" height="200" autoPlay loop muted><source src={favoritedata} type="video/mp4"/></video>
-                    <p>The favourite's feature allows users to favourite movies on the home page or single page and brings the favourited movies into one location, on the favourites page. This information is stored so that when you leave the page website your favourited movie will still be there. The favourited movie can be removed on the Home page, Single Page, or Favourites page. Once removed the heart will be unfilled</p>
+                    <p>The favourite's feature allows users to favourite movies on the home page or single page and brings the favourited movies into one location, on the favourites page. This information is stored so that when you leave the page website your favourited movie will still be there. The favourited movie can be removed on the Home page, Single Page, or Favourites page. Once removed the heart will be unfilled.</p>
                     </div>
                     
                     <h1> The Sorting Feature </h1>
                     <div class="tab-div">
                     <video width="470" height="200" autoPlay loop muted><source src={sort} type="video/mp4"/></video>
-                    <p>The sorting feature was created to sort the movies dependant on the URL of the movies that was pulled from the TMDB API. This allows the movies to be sorted whether in Upcoming, Popular, Now Playing, and Top Rated. By using TMDB's API movies can be further sorted by genre's, actors, and rating</p>
+                    <p>The sorting feature was created to sort the movies dependant on the URL of the movies that was pulled from the TMDB API. This allows the movies to be sorted whether in Upcoming, Popular, Now Playing, and Top Rated. By using TMDB's API movies can be further sorted by genre's and rating.</p>
                     </div>
                     
                 </TabPanel>
-
+{/* 
                 <TabPanel className="tab-content">
                     <p>Tab 2 works!</p>
-                </TabPanel>
+                </TabPanel> */}
                 
                 <TabPanel className="tab-content">
                     <h1>SetUp</h1>
-                    <p>We set up with React and created a new Git repository in order to be able to push and pull code. The work was divided into different sections and we met up daily to discuss our progress and what we were struggling on. Near the end of the project we all sat together and designed the small details as a team</p>
+                    <p>We set up with React and created a new Git repository in order to be able to push and pull code. The work was divided into different sections and we met up daily to discuss our progress and what we were struggling on. Near the end of the project we all sat together and designed the small details as a team.</p>
 
                     <h1>Goal</h1>
                     <p>To create a functional and appealing movie database with ideal user experience and ease of use</p>
 
                     <h1>BrainStorm</h1>
-                    <p>As a group of three we started with mockups and design in XD. We discussed the different user interface and what our end goal was for this website. Even though not yet achieved our hopes were to create a login feature so as to make a more ideal user experience. We proceeded in building a site plan and styleguide so as to figure out the ideal colour scheme, fonts, and layout for the optimal user experience. Logo was developed in Adobe Illustrate</p>
+                    <p>As a group of three we started with mockups. We discussed the different user interface and what our end goal was for this website. Even though not yet achieved our hopes were to create a login feature so as to make a more ideal user experience. We proceeded in building a site plan and styleguide so as to figure out the ideal colour scheme, fonts, and layout for the optimal user experience.</p>
 
                     <h1>Challenge</h1>
-                    <p>A challenge faced was the navigation header. This was pulled from CodePen and the code had a few functional problems. This led to a horizontal scrollbar because of the absolute positioning. It took a while to troubleshoot the issue, but after experimenting with the header on another project we were able to adjust the code</p>
+                    <p>A challenge faced was the navigation header. This was pulled from CodePen and the code had a few functional problems. This led to a horizontal scrollbar because of the absolute positioning. It took a while to troubleshoot the issue, but after experimenting with the header on another project we were able to adjust the code.</p>
 
                     <h1>Solutions</h1>
-                    <p>One thought was to find a different code from codepen, but after researching and testing the issue we were able to troubleshoot and find a solution</p>
+                    <p>One thought was to find a different code from codepen, but after researching and testing the issue we were able to troubleshoot and find a solution.</p>
                 </TabPanel>
                 </Tabs>
 
