@@ -39,7 +39,7 @@ progress,
 video {
 	display: inline-block;
 	vertical-align: baseline;
-		width: 70%;
+		width: 100%;
 		height: auto;
 }
 
@@ -840,10 +840,11 @@ a:active {
 		display: grid;
 		grid-template-rows: 1fr;
 		grid-template-columns: 1fr 1fr;
+		gap :40px;
 	}
 	/*footer AK*/
 	.copyright a {
-		font-size: 30px;
+		font-size: 20px;
 	}
 
 	/* contact */
@@ -853,7 +854,12 @@ a:active {
 	.total-contact p {
 		font-size: 33px;
 	}
-}
+	.tab-content p{
+		padding-top: 20px;
+		font-size: 1.5rem;
+	}
+} /* end table size stling */
+
 /* header a text styling */
 .site-navigation h3 {
 	position: relative;
@@ -919,6 +925,7 @@ footer p {
 
 
 
+
 /*--------------------------------------------------------------
 # React Tabs Styling
 --------------------------------------------------------------*/
@@ -935,10 +942,30 @@ footer p {
 	justify-content: center;
 }
 .tab-content {
+
 	text-align: center;
+
+
 }
+
+.tab-content h1 {
+	background-image: linear-gradient(30deg, #8EC5FC 0%, #E0C3FC 100%);
+	background-color: #8EC5FC 0;
+	/* background-size: 100%; */
+	-webkit-background-clip: text;
+	-moz-background-clip: text;
+	-webkit-text-fill-color: transparent; 
+	-moz-text-fill-color: transparent;
+	text-decoration: underline;
+  text-decoration-color: #ebd5d5;
+}
+
 .tab-content p {
-	margin-top: 30px;
+	color: white;
+	margin-top: 20px;
+	font-size: 1.2rem;
+	font-family: 'Inconsolata', monospace;
+	font-weight: 100;
 }
 
 .react-tabs__tab button{

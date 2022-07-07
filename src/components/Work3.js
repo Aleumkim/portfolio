@@ -1,10 +1,10 @@
 import { React, useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs"
-import moviedata from '../video/moviedata.mp4'
-import singledata from '../video/singledata.mp4'
-import favoritedata from '../video/favoritedata.mp4'
-import sort from '../video/sort.mp4'
+import enter from '../video/enter-name.mp4'
+import easy from '../video/easy-mode.mp4'
+import hard from '../video/hard.mp4'
+import show from '../video/show-words.mp4'
 import { Route } from 'react-router-dom'
 
 
@@ -59,54 +59,48 @@ const Post = ({featuredImage}) => {
                 <TabList>
                     <Tab><button>Mockups</button></Tab>
                     <Tab><button>Functionality</button></Tab>
-                    <Tab><button>SetUp</button></Tab>
+                    <Tab><button>Challenge</button></Tab>
                 </TabList>
 
                     <TabPanel className="tab-content">
-                    <h1> The Navigation Header </h1>
+                    <h1> Enter Your Name </h1>
                     <div class="tab-div">
-                    <video width="470" height="200" autoPlay loop muted><source src={moviedata} type="video/mp4"/></video>
-                    <p>This shows the different types of pages on the webssite through the navigation. On mobile the navigation is a slider which flexes into a row when hitting the desktop point. The navigation is also accessible on a fixed footer making it easier for usability especially in mobile</p>
+                    <video width="470" height="200" autoPlay loop muted><source src={enter} type="video/mp4"/></video>
+                    <p>Game users can type their names before the game and change their names by pressing button again.</p>
                     </div>
 
-                    <h1> The Single Page </h1>
+                    <h1> Eeay Mode </h1>
                     <div class="tab-div">
-                    <video width="470" height="200" autoPlay loop muted><source src={singledata} type="video/mp4"/></video>
-                    <p>The Single page can be accessed from the home page from hovering over a movie and clicking on the more info. The Single page shows the movies hero image, the rating, the overview, and the cast for the movie. The API allows for the correct picture, rating, and cast to be matched with each movie</p>
+                    <video width="470" height="200" autoPlay loop muted><source src={easy} type="video/mp4"/></video>
+                    <p>The easy mode has a time limit of 15 seconds, and user has to type the words that are randomly provided in it to move on to the next word. If user failes to type a word in 15 seconds, the game automatically ends.</p>
                     </div>
 
-                    <h1> The Favourites Feature </h1>
+                    <h1> Hard Mode </h1>
                     <div class="tab-div">
-                    <video width="470" height="200" autoPlay loop muted><source src={favoritedata} type="video/mp4"/></video>
-                    <p>The favourite's feature allows users to favourite movies on the home page or single page and brings the favourited movies into one location, on the favourites page. This information is stored so that when you leave the page website your favourited movie will still be there. The favourited movie can be removed on the Home page, Single Page, or Favourites page. Once removed the heart will be unfilled</p>
+                    <video width="470" height="200" autoPlay loop muted><source src={hard} type="video/mp4"/></video>
+                    <p>The hard mode has a time limit of 7 seconds, and user has to type the words that are randomly provided in it to move on to the next word. If user failes to type a word in 7 seconds, the game automatically ends.</p>
                     </div>
 
-                    <h1> The Sorting Feature </h1>
+                    <h1> Show Words </h1>
                     <div class="tab-div">
-                    <video width="470" height="200" autoPlay loop muted><source src={sort} type="video/mp4"/></video>
-                    <p>The sorting feature was created to sort the movies dependant on the URL of the movies that was pulled from the TMDB API. This allows the movies to be sorted whether in Upcoming, Popular, Now Playing, and Top Rated. By using TMDB's API movies can be further sorted by genre's, actors, and rating</p>
+                    <video width="470" height="200" autoPlay loop muted><source src={show} type="video/mp4"/></video>
+                    <p>If the user enters something before pressing the start button, the word press the button appears on the right. When the game starts and the user types the word correctly, the word is displayed on the left.</p>
                     </div>
                 </TabPanel>
 
                 <TabPanel className="tab-content">
-                    <p>Tab 2 works!</p>
+                    <p>The setInterval() function was used to limit typing time, and the ClearInterval() function was used to stop time.
+                         Toastify was used to display the typed word in the upper left. Toast Notifications are popup messages that are added so as to display a message to a user.
+                    </p>
                 </TabPanel>
                 
                 <TabPanel className="tab-content">
-                    <h1>SetUp</h1>
-                    <p>We set up with React and created a new Git repository in order to be able to push and pull code. The work was divided into different sections and we met up daily to discuss our progress and what we were struggling on. Near the end of the project we all sat together and designed the small details as a team</p>
-
-                    <h1>Goal</h1>
-                    <p>To create a functional and appealing movie database with ideal user experience and ease of use</p>
-
-                    <h1>BrainStorm</h1>
-                    <p>As a group of three we started with mockups and design in XD. We discussed the different user interface and what our end goal was for this website. Even though not yet achieved our hopes were to create a login feature so as to make a more ideal user experience. We proceeded in building a site plan and styleguide so as to figure out the ideal colour scheme, fonts, and layout for the optimal user experience. Logo was developed in Adobe Illustrate</p>
-
+                   
                     <h1>Challenge</h1>
-                    <p>A challenge faced was the navigation header. This was pulled from CodePen and the code had a few functional problems. This led to a horizontal scrollbar because of the absolute positioning. It took a while to troubleshoot the issue, but after experimenting with the header on another project we were able to adjust the code</p>
+                    <p>It was difficult to separate the function of reducing both easy mode and hard mode with different time limits and then stopping at 0 seconds. I made this function complete, but the other problem was that the function of increasing the score by 1 point didn't work properly.</p>
 
                     <h1>Solutions</h1>
-                    <p>One thought was to find a different code from codepen, but after researching and testing the issue we were able to troubleshoot and find a solution</p>
+                    <p>I found a channel on YouTube looking for solutions related to these problems, and I was able to solve the problem by watching related videos. In conclusion, I was able to make two checkstatus() functions by separating the functions of easy mode and hard mode.</p>
                 </TabPanel>
                 </Tabs>
 

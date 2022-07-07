@@ -1,10 +1,8 @@
 import { React, useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs"
-import moviedata from '../video/moviedata.mp4'
-import singledata from '../video/singledata.mp4'
-import favoritedata from '../video/favoritedata.mp4'
-import sort from '../video/sort.mp4'
+import house from '../video/house.mp4'
+import login from '../video/login.mp4'
 import { Route } from 'react-router-dom'
 
 
@@ -50,7 +48,8 @@ const Post = ({featuredImage}) => {
                 </article>
 
                 <section class="live-tab">
-                <a href="https://repeeps.netlify.app/" target="_blank" rel="noreferrer"> Website</a>
+                <a href="https://aleumkim.com/realestat_app/" target="_blank" rel="noreferrer">Website</a>
+                <a href="https://github.com/Hyonsok/realestat_app/" target="_blank" rel="noreferrer">Github</a>
                 </section>
 
                 <div className="App">
@@ -58,56 +57,34 @@ const Post = ({featuredImage}) => {
                 <Tabs className="Tabs">
                 <TabList>
                     <Tab><button>Mockups</button></Tab>
-                    <Tab><button>Functionality</button></Tab>
                     <Tab><button>SetUp</button></Tab>
                 </TabList>
 
                     <TabPanel className="tab-content">
-                    <h1> The Navigation Header </h1>
+                    <h1> House Page </h1>
                     <div class="tab-div">
-                    <video width="470" height="200" autoPlay loop muted><source src={moviedata} type="video/mp4"/></video>
-                    <p>This shows the different types of pages on the webssite through the navigation. On mobile the navigation is a slider which flexes into a row when hitting the desktop point. The navigation is also accessible on a fixed footer making it easier for usability especially in mobile</p>
+                    <video width="470" height="200" autoPlay loop muted><source src={house} type="video/mp4"/></video>
+                    <p>People can see images of houses and price information on the home page. When people click on the picture of the house, they can find out the detailed price information of the house, the size of the house, the year it was built in, and the characteristics of the house.</p>
                     </div>
                     
-                    <h1> The Single Page </h1>
+                    <h1> Sign Up & Log In </h1>
                     <div class="tab-div">
-                    <video width="470" height="200" autoPlay loop muted><source src={singledata} type="video/mp4"/></video>
-                    <p>The Single page can be accessed from the home page from hovering over a movie and clicking on the more info. The Single page shows the movies hero image, the rating, the overview, and the cast for the movie. The API allows for the correct picture, rating, and cast to be matched with each movie</p>
+                    <video width="470" height="200" autoPlay loop muted><source src={login} type="video/mp4"/></video>
+                    <p>Sign up & login pages are linked together. When you click the login button, you can enter the user's name, change the entered user's information on the sign up page, and when you press the logout button, the information disappears.</p>
                     </div>
 
-                    <h1> The Favourites Feature </h1>
-                    <div class="tab-div">
-                    <video width="470" height="200" autoPlay loop muted><source src={favoritedata} type="video/mp4"/></video>
-                    <p>The favourite's feature allows users to favourite movies on the home page or single page and brings the favourited movies into one location, on the favourites page. This information is stored so that when you leave the page website your favourited movie will still be there. The favourited movie can be removed on the Home page, Single Page, or Favourites page. Once removed the heart will be unfilled</p>
-                    </div>
-
-                    <h1> The Sorting Feature </h1>
-                    <div class="tab-div">
-                    <video width="470" height="200" autoPlay loop muted><source src={sort} type="video/mp4"/></video>
-                    <p>The sorting feature was created to sort the movies dependant on the URL of the movies that was pulled from the TMDB API. This allows the movies to be sorted whether in Upcoming, Popular, Now Playing, and Top Rated. By using TMDB's API movies can be further sorted by genre's, actors, and rating</p>
-                    </div>
-                </TabPanel>
-
-                <TabPanel className="tab-content">
-                    <p>FUNCTIONALITY:
-                       Using Bootstrap to create the buttons and the module, I was able to display the instructions of the game. Jquery was used to hide and show buttons, along with switching between the three questions of "Red or Black", "High or Low", and "Which suit will show up next".</p>
-                </TabPanel>
                 
+                </TabPanel>
+
                 <TabPanel className="tab-content">
                     <h1>SetUp</h1>
-                    <p>We set up with React and created a new Git repository in order to be able to push and pull code. The work was divided into different sections and we met up daily to discuss our progress and what we were struggling on. Near the end of the project we all sat together and designed the small details as a team</p>
-
-                    <h1>Goal</h1>
-                    <p>To create a functional and appealing movie database with ideal user experience and ease of use</p>
-
-                    <h1>BrainStorm</h1>
-                    <p>As a group of three we started with mockups and design in XD. We discussed the different user interface and what our end goal was for this website. Even though not yet achieved our hopes were to create a login feature so as to make a more ideal user experience. We proceeded in building a site plan and styleguide so as to figure out the ideal colour scheme, fonts, and layout for the optimal user experience. Logo was developed in Adobe Illustrate</p>
+                    <p>We set up with React and created a new Git repository in order to be able to push and pull code. The work was divided into different sections and we met up daily to discuss our progress and what we were struggling on. Near the end of the project we all sat together and designed the small details as a team.</p>
 
                     <h1>Challenge</h1>
-                    <p>A challenge faced was the navigation header. This was pulled from CodePen and the code had a few functional problems. This led to a horizontal scrollbar because of the absolute positioning. It took a while to troubleshoot the issue, but after experimenting with the header on another project we were able to adjust the code</p>
+                    <p>It was difficult to create a function to enter and log out a name using the Login button. I had to make it using the useDispatch() function in the reducer, but I had a hard time creating the page because I didn't understand the concept clearly.</p>
 
                     <h1>Solutions</h1>
-                    <p>One thought was to find a different code from codepen, but after researching and testing the issue we were able to troubleshoot and find a solution</p>
+                    <p>Information was extracted by referring to the reacthooks-related materials learned during class. Also, there were codes related to the assignment that I submitted before, so I could solve the problem.</p>
                 </TabPanel>
                 </Tabs>
 

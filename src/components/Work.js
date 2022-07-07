@@ -64,7 +64,7 @@ const Post = ({featuredImage}) => {
                 <TabPanel className="tab-content">
                     <h1>Coming Soon!</h1>
                     <div>
-                    <video width="470" height="200" autoPlay loop muted><source src={video1} type="video/mp4"/></video>
+                    {/* <video width="470" height="200" autoPlay loop muted><source src={video1} type="video/mp4"/></video> */}
                     </div>
                 </TabPanel>
 
