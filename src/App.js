@@ -8,6 +8,7 @@ import Work from './components/Work'
 import Work1 from './components/Work1'
 import Work2 from './components/Work2'
 import Work3 from './components/Work3'
+import logo from './img/favicon1.png'
 
 
 
@@ -31,8 +32,13 @@ function App() {
   return (
       <Router basename="/wp-react">
         <header id="masthead" className="site-header">
-          <div className="site-branding">
-            {/* <p className="site-title">AK Portfolio</p> */}
+          <div className="logo">
+            <a href="http://localhost:3000/wp-react/" target="_blank" rel="noreferrer">
+            <img
+              src={logo}
+              alt="logo"
+            />
+            </a>
           </div>
           <nav className="site-navigation">
             <ul>
@@ -56,7 +62,7 @@ function App() {
           </Routes>
         </main>
         <footer className='footer'>
-				  <p className="copyright"><a href="https://wp.bcitwebdeveloper.ca/"> Created by Aleum Kim</a>.</p>
+				  <p className="copyright"><a href="http://localhost:3000/wp-react/"> Created by Aleum Kim</a>.</p>
         </footer>
       </Router>
   );

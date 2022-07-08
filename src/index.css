@@ -14,8 +14,7 @@ body {
     height: 100%;
 		margin: 0;
 		background-color: black;
-		--nav-load-time: 300ms;
-		--nav-link-load-time: 500ms;
+		transition: all 10s;
 }
 
 article,
@@ -236,11 +235,80 @@ h6 {
 	font-family: 'Maitree', sans-serif;
 	clear: both;
 }
+/*--------------------------------------------------------------
+# AK Styling Section
+--------------------------------------------------------------*/
+/*front-page-styling AK*/
 
-.site-header {
+.entry-content {
 	text-align: center;
-	padding: 0 1.25rem;
+	position: relative;
+	top:-40px;
+	font-family: 'brandon grotesque';
 }
+
+.wrapper-button {
+	text-align: center;
+	margin-top:25px;
+	outline:none;
+}
+
+.icon {
+	display: flex;
+	flex-direction: row;
+}
+
+/*about-page-styling AK*/
+
+.about-title {
+	font-family: 'Inconsolata', monospace;
+	font-weight: 200;
+	text-align: center;
+	animation: article-load 3000ms ease-in var(--article-load-delay) infinite;
+	animation-fill-mode: forwards;
+	transform: translate(-20px);
+	opacity: 0;
+	margin-top:10px;
+}
+@keyframes article-load	{
+0% {
+	transform: translate(-10px);
+	opacity: 0;
+}
+100% {
+	transform: translate(0px);
+	opacity: 1;
+}
+}
+
+.about-section p {
+	color: black;
+	position: relative;
+	text-align: center;
+	font-size: 1.3em;
+	font-family: 'Inconsolata', monospace;
+	animation: article-load 3000ms ease-in calc(var(--article-load-delay) +200ms);
+	animation-fill-mode: forwards;
+	background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%)
+}
+@keyframes article-load	{
+	0% {
+		transform: translate(-10px);
+		opacity: 0;
+	}
+	100% {
+		transform: translate(0px);
+		opacity: 1;
+	}
+}
+
+/*Header styling AK*/
+.site-header {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
 
 p.site-title {
 	font-size: 3rem;
@@ -316,7 +384,7 @@ big {
 	text-align: center;
 	display: flex;
 	flex-direction: row;
-	justify-content:space-evenly;
+	justify-content: flex-end;
 }
 
 .site-navigation li:hover {
@@ -381,16 +449,38 @@ big {
 .work-content {
 	text-align: center;
 }
+.work-content strong{
+	text-decoration: underline;
+	text-decoration-color: #5bf390;
+} 
+
 .work-content h4 {
 	position: relative;
 	bottom:30px;
 	margin-top: 10px;
+	background-image: linear-gradient(30deg, #8EC5FC 0%, #E0C3FC 100%);
+	background-color: #8EC5FC 0;
+	-webkit-background-clip: text;
+	-moz-background-clip: text;
+	-webkit-text-fill-color: transparent; 
+	-moz-text-fill-color: transparent;
 	font-size: 2rem;
+	text-decoration: underline;
+  text-decoration-color: #ebd5d5;
+	
 }
 .work-content p {
 	position: relative;
 	bottom:30px;
+	font-family: 'Inconsolata', monospace;
 }
+
+.skill-set1 {
+	text-align: center;
+	font-family: 'Inconsolata', monospace;
+	text-decoration: underline;
+}
+
 
 /*Home page styling AK*/
 
@@ -415,63 +505,13 @@ big {
 
 }
 
-.about-title {
-		font-family: 'Inconsolata', monospace;
-		font-weight: 200;
-		text-align: center;
-		animation: article-load 3000ms ease-in var(--article-load-delay) infinite;
-		animation-fill-mode: forwards;
-		transform: translate(-20px);
-		opacity: 0;
-		margin-top:10px;
-}
-@keyframes article-load	{
-	0% {
-		transform: translate(-10px);
-		opacity: 0;
-	}
-	100% {
-		transform: translate(0px);
-		opacity: 1;
-	}
-}
-.about-section p {
-	color: black;
-	position: relative;
-	text-align: center;
-	font-size: 1.3em;
-	font-family: 'Inconsolata', monospace;
-	animation: article-load 3000ms ease-in calc(var(--article-load-delay) +200ms);
-	animation-fill-mode: forwards;
-	background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%)
-}
-@keyframes article-load	{
-	0% {
-		transform: translate(-10px);
-		opacity: 0;
-	}
-	100% {
-		transform: translate(0px);
-		opacity: 1;
-	}
-}
 
-.entry-content {
-	text-align: center;
-	position: relative;
-	top:-40px;
-	font-family: 'brandon grotesque';
-}
+
+
 .has-text-align-right {
 	font-size: 3em;
 }
 
-/*home page view button AK*/
-.wrapper-button {
-	text-align: center;
-	margin-top:25px;
-	outline:none;
-}
 
 .home-button {
 	border-radius: 10px;
@@ -750,22 +790,26 @@ a:active {
 	text-align: center;
 	align-items: center;
 	background-image: url('back.jpg');
-	height:420px;
+	/* height:420px; */
 }
 .total-contact img:hover {
 	background-color:gray;
 }
 
-/*Tablet version AK*/
+/*--------------------------------------------------------------
+# Tablet AK Styling Section
+--------------------------------------------------------------*/
 
 @media (min-width:768px)  {
 	/*header stuff*/
 	.site-navigation ul {
 		font-size: 25px;
 		justify-content:flex-end;
-		margin-left: 200px;
+		margin-left: 300px;
 	}
-		/*hompage content animation stuff*/
+
+/* content animation stuff*/
+
 	.has-text-align-left {
 		display: block;
 		margin-top:130px;
@@ -809,13 +853,7 @@ a:active {
 		text-decoration: none;
 	}
 		/*Hompage image link AK*/
-	.icon {
-		display: block;
-		position: relative;
-  	width: 80%;
-  	margin: 0 auto 0 auto;
-		margin-top:150px;
-}
+
 	/*about AK*/ 
 	.about {
 		display: grid;
@@ -836,12 +874,58 @@ a:active {
 		padding-bottom: 10px;
 		background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%)
 	}
-	.tab-div {
+	.work-content p {
+		font-size: 1.5rem;
+	}
+		/*Video location AK*/
+	.tab-div	{
+		display: grid;
+		grid-template-rows: 1fr;
+		grid-template-columns: 1fr 1fr;
+		gap :40px;
+
+	}
+	.tab-div video {
+		animation: article-load1 2000ms ease-in calc(var(--article-load-delay));
+		animation-fill-mode:forwards;
+	}
+
+	@keyframes article-load1	{
+		0% {
+			transform: translate(-200px);
+		}
+		100% {
+			transform: translate(20px);
+		}
+	}
+
+	.tab-div2, 	.tab-div4{
 		display: grid;
 		grid-template-rows: 1fr;
 		grid-template-columns: 1fr 1fr;
 		gap :40px;
 	}
+
+	.tab-div2 video, 	.tab-div4 video{
+
+		order:1;
+		animation: article-load 3000ms ease-in calc(var(--article-load-delay));
+		animation-fill-mode: forwards;
+
+	}
+	
+	@keyframes article-load	{
+		0% {
+			transform: translate(150px);
+			opacity: 0;
+		}
+		100% {
+			transform: translate(0px);
+			opacity: 1;
+		}
+	}
+	
+
 	/*footer AK*/
 	.copyright a {
 		font-size: 20px;
@@ -858,6 +942,14 @@ a:active {
 		padding-top: 20px;
 		font-size: 1.5rem;
 	}
+
+	.icon {
+		margin-left: auto;
+		margin-right: auto;
+		width: 80%;
+	}
+
+
 } /* end table size stling */
 
 /* header a text styling */
@@ -918,12 +1010,6 @@ footer p {
 }
 
 
-.icon {
-	display: flex;
-	position: relative;
-}
-
-
 
 
 /*--------------------------------------------------------------
@@ -958,6 +1044,7 @@ footer p {
 	-moz-text-fill-color: transparent;
 	text-decoration: underline;
   text-decoration-color: #ebd5d5;
+	font-size: 2rem;
 }
 
 .tab-content p {
@@ -987,11 +1074,16 @@ footer p {
 	bottom:60px;
 	padding: 20px 20px;
 	text-align: center;
-	background: skyblue;
+	background: #0085ba;
 	border-radius: 25px;
 	overflow: hidden;
 	border-radius: 20px;
 }
+.live-tab:hover {
+	color:white;
+	background-color: sandybrown;
+}
+
 
 .live-tab a {
 	padding:10px;
@@ -1010,4 +1102,5 @@ footer p {
 		position: relative;
 		right:400px;
 	}
+
 }

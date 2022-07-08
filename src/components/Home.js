@@ -57,21 +57,21 @@ const Home = () => {
          />
          </a>
           
-          <a href="https://github.com/" target="_blank" rel="noreferrer">
+          <a href="https://www.linkedin.com/feed/" target="_blank" rel="noreferrer">
           <img
              src={js}
              alt="example"
           />
           </a>
 
-          <a href="https://github.com/" target="_blank" rel="noreferrer">
+          <a href="https://www.linkedin.com/feed/" target="_blank" rel="noreferrer">
           <img
             src={php}
             alt="example"
           />
         </a>
 
-        <a href="https://github.com/" target="_blank" rel="noreferrer">
+        <a href="https://www.linkedin.com/feed/" target="_blank" rel="noreferrer">
           <img
             src={press}
             alt="example"

@@ -61,14 +61,14 @@ const Post = ({featuredImage}) => {
                 </TabList>
 
                     <TabPanel className="tab-content">
-                    <h1> House Page </h1>
+                    <h1> ◌ House Page ◌ </h1>
                     <div class="tab-div">
                     <video width="470" height="200" autoPlay loop muted><source src={house} type="video/mp4"/></video>
                     <p>People can see images of houses and price information on the home page. When people click on the picture of the house, they can find out the detailed price information of the house, the size of the house, the year it was built in, and the characteristics of the house.</p>
                     </div>
                     
-                    <h1> Sign Up & Log In </h1>
-                    <div class="tab-div">
+                    <h1> ◌ Sign Up & Log In ◌ </h1>
+                    <div class="tab-div2">
                     <video width="470" height="200" autoPlay loop muted><source src={login} type="video/mp4"/></video>
                     <p>Sign up & login pages are linked together. When you click the login button, you can enter the user's name, change the entered user's information on the sign up page, and when you press the logout button, the information disappears.</p>
                     </div>

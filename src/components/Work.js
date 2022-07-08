@@ -43,7 +43,6 @@ const Post = ({featuredImage}) => {
                  
                     <div className="work-content" dangerouslySetInnerHTML={{__html:restData.content.rendered}} 
                      />
-
                 </article>
 
                 <section class="live-tab">
@@ -69,7 +68,7 @@ const Post = ({featuredImage}) => {
                 </TabPanel>
 
                 <TabPanel className="tab-content">
-                    <h1> Mobile & Desktop</h1>
+                    <h1> ◌ Mobile & Desktop ◌ </h1>
                     <video width="470" height="200" autoPlay loop muted><source src={capstonewire} type="video/mp4"/></video>
                     <p>Wireframes were created in Figma. The wireframes are based off of what was created in the site architecture and content plan. First we created the desktop wireframes and then went to mobile. After the completion of the wireframes we found what WordPress pages would correlate to each section of the wireframe page.</p>
                 </TabPanel>

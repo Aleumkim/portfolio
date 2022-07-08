@@ -64,26 +64,26 @@ const Post = ({featuredImage}) => {
                 </TabList>
 
                     <TabPanel className="tab-content">
-                    <h1> The Navigation Header </h1>
+                    <h1> ◌ The Navigation Header ◌ </h1>
                     <div class="tab-div">
                     <video width="470" height="200" autoPlay loop muted><source src={moviedata} type="video/mp4"/></video>
                     <p>This shows the different types of pages on the website through the navigation. On mobile we added a navigation in the footer in order for the user to be able to easily access the navigation instead of scrolling to the top of the webpage.</p>
                     </div>
 
-                    <h1> The Single Page </h1>
-                    <div class="tab-div">
+                    <h1> ◌ The Single Page ◌ </h1>
+                    <div class="tab-div2">
                     <video width="470" height="200" autoPlay loop muted><source src={singledata} type="video/mp4"/></video>
                     <p>The Single page can be accessed from the home page from hovering over a movie and clicking on the more info. The Single page shows the movies hero image, the rating, the overview, and the genre for the movie. The API allows for the correct picture, rating, and genre to be matched with each movie.</p>
                     </div>
 
-                    <h1> The Favourites Feature </h1>
+                    <h1> ◌ The Favourites Feature ◌ </h1>
                     <div class="tab-div">
                     <video width="470" height="200" autoPlay loop muted><source src={favoritedata} type="video/mp4"/></video>
                     <p>The favourite's feature allows users to favourite movies on the home page or single page and brings the favourited movies into one location, on the favourites page. This information is stored so that when you leave the page website your favourited movie will still be there. The favourited movie can be removed on the Home page, Single Page, or Favourites page. Once removed the heart will be unfilled.</p>
                     </div>
                     
-                    <h1> The Sorting Feature </h1>
-                    <div class="tab-div">
+                    <h1> ◌ The Sorting Feature ◌ </h1>
+                    <div class="tab-div4">
                     <video width="470" height="200" autoPlay loop muted><source src={sort} type="video/mp4"/></video>
                     <p>The sorting feature was created to sort the movies dependant on the URL of the movies that was pulled from the TMDB API. This allows the movies to be sorted whether in Upcoming, Popular, Now Playing, and Top Rated. By using TMDB's API movies can be further sorted by genre's and rating.</p>
                     </div>

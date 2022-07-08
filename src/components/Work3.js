@@ -63,26 +63,26 @@ const Post = ({featuredImage}) => {
                 </TabList>
 
                     <TabPanel className="tab-content">
-                    <h1> Enter Your Name </h1>
+                    <h1> ◌ Enter Your Name ◌ </h1>
                     <div class="tab-div">
                     <video width="470" height="200" autoPlay loop muted><source src={enter} type="video/mp4"/></video>
                     <p>Game users can type their names before the game and change their names by pressing button again.</p>
                     </div>
 
-                    <h1> Eeay Mode </h1>
-                    <div class="tab-div">
+                    <h1> ◌ Eeay Mode ◌ </h1>
+                    <div class="tab-div2">
                     <video width="470" height="200" autoPlay loop muted><source src={easy} type="video/mp4"/></video>
                     <p>The easy mode has a time limit of 15 seconds, and user has to type the words that are randomly provided in it to move on to the next word. If user failes to type a word in 15 seconds, the game automatically ends.</p>
                     </div>
 
-                    <h1> Hard Mode </h1>
+                    <h1> ◌ Hard Mode ◌ </h1>
                     <div class="tab-div">
                     <video width="470" height="200" autoPlay loop muted><source src={hard} type="video/mp4"/></video>
                     <p>The hard mode has a time limit of 7 seconds, and user has to type the words that are randomly provided in it to move on to the next word. If user failes to type a word in 7 seconds, the game automatically ends.</p>
                     </div>
 
-                    <h1> Show Words </h1>
-                    <div class="tab-div">
+                    <h1> ◌ Show Words ◌ </h1>
+                    <div class="tab-div4">
                     <video width="470" height="200" autoPlay loop muted><source src={show} type="video/mp4"/></video>
                     <p>If the user enters something before pressing the start button, the word press the button appears on the right. When the game starts and the user types the word correctly, the word is displayed on the left.</p>
                     </div>

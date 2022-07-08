@@ -53,10 +53,11 @@ const Home = () => {
           />
         </a>
         </a>
+        <p class="contact-p">kimaleum3@gmail.com</p>
             </section>
             </article>
 
-            
+        
         : 
             <Loading />
         }
