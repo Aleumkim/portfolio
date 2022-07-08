@@ -8,7 +8,7 @@ import { Route } from 'react-router-dom'
 
 
 
-const Post = ({featuredImage}) => {
+const Post = () => {
     const restPath = `https://aleumkim.com/ak-portfolio/wp-json/wp/v2/ak-work/77?_embed`
     const [restData, setData] = useState([])
     const [isLoaded, setLoadStatus] = useState(false)

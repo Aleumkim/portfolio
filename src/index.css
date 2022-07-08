@@ -238,6 +238,48 @@ h6 {
 /*--------------------------------------------------------------
 # AK Styling Section
 --------------------------------------------------------------*/
+/*Header-section-styling AK*/
+.site-header {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.site-navigation ul {
+	list-style: none;
+	margin: 0;
+	text-align: center;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+}
+
+.site-navigation li:hover {
+	background-color:#ffffff44;
+}
+
+.site-navigation h3 {
+	position: relative;
+	bottom:30px;
+	font-family: 'brandon grotesque';
+	font-weight:bold;
+	font-size: 1em;
+	background-color: #ff4cff 0;
+	background-image: linear-gradient(45deg, #ff4cff 0, #ff813d);
+	/* background-size: 100%; */
+	-webkit-background-clip: text;
+	-moz-background-clip: text;
+	-webkit-text-fill-color: transparent; 
+	-moz-text-fill-color: transparent;
+	
+}
+
+.site-navigation a {
+	display: block;
+	padding: 1rem;
+}
+
+
 /*front-page-styling AK*/
 
 .entry-content {
@@ -257,6 +299,36 @@ h6 {
 	display: flex;
 	flex-direction: row;
 }
+
+.has-text-align-left {
+	background-color: #ff4cff 0;
+	background-image: linear-gradient(45deg, #ff4cff 0, #ff813d);
+	background-size: 100%;
+	-webkit-background-clip: text;
+	-moz-background-clip: text;
+	-webkit-text-fill-color: transparent; 
+	-moz-text-fill-color: transparent;
+	font-size: 1.8rem;
+}
+
+.home-button {
+	border-radius: 10px;
+	background-color: #ff4cff;
+	padding: 15px;
+	box-shadow: inset 0 0 0 0 #f9e506;
+	transition: ease-out 2s;
+	text-decoration: none;
+}
+
+.home-button:hover {
+
+	box-shadow: inset 300px 0 0 0 #ff813d;
+}
+
+.has-text-align-right {
+	font-size: 3em;
+}
+
 
 /*about-page-styling AK*/
 
@@ -301,13 +373,150 @@ h6 {
 		opacity: 1;
 	}
 }
+ .headshot {
+	/* background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%) */
+		background-image: url('favicon.png') ;
+		background-size: 140%;
+		background-position: center;
+		width: 100%;
+		min-height: 350px;
 
-/*Header styling AK*/
-.site-header {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
 }
+
+/*works-page-styling AK*/
+
+	.works {
+		background-image: linear-gradient(30deg, #8EC5FC 0%, #E0C3FC 100%);
+		width: 100%;
+		min-height: 400px;
+		background-size: cover;
+		background-blend-mode:lighten;
+		position:relative;
+		bottom:70px;
+	}
+
+	.works-title {
+		text-align: center;
+		position: relative;
+		color:palegoldenrod;
+		top:150px;
+		font-size: 2.5em;
+		overflow: hidden;
+	}
+
+	#post-77:hover {
+		background-image: 
+	url('woo.png');
+	}
+
+	#post-68:hover {
+	background-image:
+	url('react.jpg');
+	}
+
+	#post-86:hover {
+	background-image:
+	url('rep.jpg');
+	}
+
+	#post-84:hover {
+	background-image:
+	url('typing.jpg');
+	}
+
+	#post-77 img{
+	display: none;
+	}
+	#post-68 img{
+	display: none;
+	}
+	#post-86 img{
+	display: none;
+	}
+	#post-84 img{
+	display: none;
+	}
+
+
+/*single-work-page-styling AK*/
+
+.single-work {
+	pointer-events: none;
+}	
+
+.work-content {
+	text-align: center;
+}
+.work-content strong{
+	text-decoration: underline;
+	text-decoration-color: #5bf390;
+} 
+
+.work-content h4 {
+	position: relative;
+	bottom:30px;
+	margin-top: 10px;
+	background-image: linear-gradient(30deg, #8EC5FC 0%, #E0C3FC 100%);
+	background-color: #8EC5FC 0;
+	-webkit-background-clip: text;
+	-moz-background-clip: text;
+	-webkit-text-fill-color: transparent; 
+	-moz-text-fill-color: transparent;
+	font-size: 2rem;
+	text-decoration: underline;
+  text-decoration-color: #ebd5d5;
+	
+}
+.work-content p {
+	position: relative;
+	bottom:30px;
+	font-family: 'Inconsolata', monospace;
+}
+
+/*contact-page-styling AK*/
+
+.total-contact {
+	text-align: center;
+	align-items: center;
+	background-image: url('back.jpg');
+	/* height:420px; */
+}
+.total-contact img:hover {
+	background-color:gray;
+}
+
+.contact-heading {
+	font-family: 'Inconsolata', monospace;
+	color:black;
+}
+
+.contact-p {
+	color:black;
+	font-size: 1.3em;
+	font-family: 'Inconsolata', monospace;
+	font-weight: 500;
+} 
+
+/*footer&copyright-styling AK*/
+
+footer p {
+	margin: 0;
+}
+.copyright {
+	font-family: 'brandon grotesque';
+	font-weight: bold;
+	padding: 4.25rem;
+	font-size: 1rem;
+	text-align: center;
+	background-color: #ff4cff 0;
+	background-image: linear-gradient(45deg, #ff4cff 0, #ff813d);
+	background-size: 100%;
+	-webkit-background-clip: text;
+	-moz-background-clip: text;
+	-webkit-text-fill-color: transparent; 
+	-moz-text-fill-color: transparent;
+}
+
 
 
 p.site-title {
@@ -376,156 +585,12 @@ big {
 	font-size: 125%;
 }
 
-/*header AK stuff*/
-
-.site-navigation ul {
-	list-style: none;
-	margin: 0;
-	text-align: center;
-	display: flex;
-	flex-direction: row;
-	justify-content: flex-end;
-}
-
-.site-navigation li:hover {
-	background-color:#ffffff44;
-}
-
-/*Works Page AK*/
-.works {
-	background-image: linear-gradient(30deg, #8EC5FC 0%, #E0C3FC 100%);
-	width: 100%;
-	min-height: 400px;
-	background-size: cover;
-	background-blend-mode:lighten;
-	position:relative;
-	bottom:70px;
-}
-
-#post-77:hover {
-		background-image: 
-	url('woo.png');
-}
-.single-work {
-	pointer-events: none;
-}	
-.works-title {
-	text-align: center;
-	position: relative;
-	color:palegoldenrod;
-	top:150px;
-	font-size: 2.5em;
-	overflow: hidden;
-}
-
-#post-68:hover {
-	background-image:
-	url('react.jpg');
-}
-
-#post-86:hover {
-	background-image:
-	url('rep.jpg');
-}
-
-#post-84:hover {
-	background-image:
-	url('typing.jpg');
-}
-
-#post-77 img{
-	display: none;
-}
-#post-68 img{
-	display: none;
-}
-#post-86 img{
-	display: none;
-}
-#post-84 img{
-	display: none;
-}
-
-.work-content {
-	text-align: center;
-}
-.work-content strong{
-	text-decoration: underline;
-	text-decoration-color: #5bf390;
-} 
-
-.work-content h4 {
-	position: relative;
-	bottom:30px;
-	margin-top: 10px;
-	background-image: linear-gradient(30deg, #8EC5FC 0%, #E0C3FC 100%);
-	background-color: #8EC5FC 0;
-	-webkit-background-clip: text;
-	-moz-background-clip: text;
-	-webkit-text-fill-color: transparent; 
-	-moz-text-fill-color: transparent;
-	font-size: 2rem;
-	text-decoration: underline;
-  text-decoration-color: #ebd5d5;
-	
-}
-.work-content p {
-	position: relative;
-	bottom:30px;
-	font-family: 'Inconsolata', monospace;
-}
-
-.skill-set1 {
-	text-align: center;
-	font-family: 'Inconsolata', monospace;
-	text-decoration: underline;
-}
-
-
-/*Home page styling AK*/
-
-.has-text-align-left {
-	background-color: #ff4cff 0;
-	background-image: linear-gradient(45deg, #ff4cff 0, #ff813d);
-	background-size: 100%;
-	-webkit-background-clip: text;
-	-moz-background-clip: text;
-	-webkit-text-fill-color: transparent; 
-	-moz-text-fill-color: transparent;
-	font-size: 1.8rem;
-}
- /* About AK styling*/
- .headshot {
-		/* background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%) */
-			background-image: url('favicon.png') ;
-			background-size: 140%;
-			background-position: center;
-			width: 100%;
-			min-height: 350px;
-
-}
 
 
 
 
-.has-text-align-right {
-	font-size: 3em;
-}
 
 
-.home-button {
-	border-radius: 10px;
-	background-color: #ff4cff;
-	padding: 15px;
-	box-shadow: inset 0 0 0 0 #f9e506;
-	transition: ease-out 2s;
-	text-decoration: none;
-}
-
-.home-button:hover {
-
-	box-shadow: inset 300px 0 0 0 #ff813d;
-}
 
 
 /*--------------------------------------------------------------
@@ -772,30 +837,6 @@ a:active {
 
 
 
-/* Contact Styling */
-
-.contact-heading {
-	font-family: 'Inconsolata', monospace;
-	color:black;
-}
-
-.contact-p {
-	color:black;
-	font-size: 1.3em;
-	font-family: 'Inconsolata', monospace;
-	font-weight: 500;
-} 
-
-.total-contact {
-	text-align: center;
-	align-items: center;
-	background-image: url('back.jpg');
-	/* height:420px; */
-}
-.total-contact img:hover {
-	background-color:gray;
-}
-
 /*--------------------------------------------------------------
 # Tablet AK Styling Section
 --------------------------------------------------------------*/
@@ -852,7 +893,7 @@ a:active {
 		font-size: 30px;
 		text-decoration: none;
 	}
-		/*Hompage image link AK*/
+
 
 	/*about AK*/ 
 	.about {
@@ -952,45 +993,7 @@ a:active {
 
 } /* end table size stling */
 
-/* header a text styling */
-.site-navigation h3 {
-	position: relative;
-	bottom:30px;
-	font-family: 'brandon grotesque';
-	font-weight:bold;
-	font-size: 1em;
-	background-color: #ff4cff 0;
-	background-image: linear-gradient(45deg, #ff4cff 0, #ff813d);
-	/* background-size: 100%; */
-	-webkit-background-clip: text;
-	-moz-background-clip: text;
-	-webkit-text-fill-color: transparent; 
-	-moz-text-fill-color: transparent;
-	
-}
 
-.site-navigation a {
-	display: block;
-	padding: 1rem;
-}
-
-footer p {
-	margin: 0;
-}
-.copyright {
-	font-family: 'brandon grotesque';
-	font-weight: bold;
-	padding: 4.25rem;
-	font-size: 1rem;
-	text-align: center;
-	background-color: #ff4cff 0;
-	background-image: linear-gradient(45deg, #ff4cff 0, #ff813d);
-	background-size: 100%;
-	-webkit-background-clip: text;
-	-moz-background-clip: text;
-	-webkit-text-fill-color: transparent; 
-	-moz-text-fill-color: transparent;
-}
 
 .posts-navigation {
 	display: grid;
@@ -1013,7 +1016,7 @@ footer p {
 
 
 /*--------------------------------------------------------------
-# React Tabs Styling
+# React Tablet Styling
 --------------------------------------------------------------*/
 .react-tabs__tab-list{
 	display: flex;
@@ -1030,8 +1033,6 @@ footer p {
 .tab-content {
 
 	text-align: center;
-
-
 }
 
 .tab-content h1 {
@@ -1083,7 +1084,6 @@ footer p {
 	color:white;
 	background-color: sandybrown;
 }
-
 
 .live-tab a {
 	padding:10px;

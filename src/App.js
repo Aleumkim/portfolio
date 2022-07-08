@@ -30,10 +30,10 @@ function App() {
   }
 
   return (
-      <Router basename="/wp-react">
+      <Router basename="/portfolio">
         <header id="masthead" className="site-header">
           <div className="logo">
-            <a href="http://localhost:3000/wp-react/" target="_blank" rel="noreferrer">
+            <a href="https://aleumkim.com/portfolio/" target="_blank" rel="noreferrer">
             <img
               src={logo}
               alt="logo"
