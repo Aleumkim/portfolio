@@ -62,7 +62,7 @@ function App() {
           </Routes>
         </main>
         <footer className='footer'>
-				  <p className="copyright"><a href="http://localhost:3000/wp-react/"> Created by Aleum Kim</a>.</p>
+				  <p className="copyright"><a href="https://www.linkedin.com/feed/"> Created by Aleum Kim</a>.</p>
         </footer>
       </Router>
   );
