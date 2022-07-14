@@ -336,7 +336,7 @@ h6 {
 	font-family: 'Inconsolata', monospace;
 	font-weight: 200;
 	text-align: center;
-	animation: article-load 3000ms ease-in var(--article-load-delay) infinite;
+	animation: article-load 3000ms ease-in var(--article-load-delay);
 	animation-fill-mode: forwards;
 	transform: translate(-20px);
 	opacity: 0;
@@ -857,7 +857,7 @@ a:active {
 		font-size: 50px;
 		animation-name: icon_ani;
 		animation-duration: 2s;
-		animation-iteration-count: infinite;
+		animation-iteration-count: initial;
 	}
 
 	@keyframes icon_ani {
@@ -871,7 +871,7 @@ a:active {
 	.entry-content h1, .entry-content h2 {
 		animation-name: heading_ani;
 		animation-duration: 2s;
-		animation-iteration-count: infinite;
+		animation-iteration-count:initial;
 	}
 	@keyframes heading_ani {
 		from {
@@ -1080,14 +1080,15 @@ a:active {
 	overflow: hidden;
 	border-radius: 20px;
 }
-.live-tab:hover {
-	color:white;
-	background-color: sandybrown;
-}
+
 
 .live-tab a {
 	padding:10px;
 	font-size: 1.4rem;
+	color:sandybrown;
+	text-decoration: none;
+}
+.live-tab a:hover {
 	background-color: #ff4cff 0;
 	background-image: linear-gradient(45deg, #ff4cff 0, #ff813d);
 	/* background-size: 100%; */
@@ -1095,6 +1096,7 @@ a:active {
 	-moz-background-clip: text;
 	-webkit-text-fill-color: transparent; 
 	-moz-text-fill-color: transparent;
+
 }
 
 @media (min-width:1024px) {
