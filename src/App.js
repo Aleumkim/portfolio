@@ -10,7 +10,8 @@ import Work2 from './components/Work2'
 import Work3 from './components/Work3'
 import BackToTopButton from './components/BackToTopButton'
 import logo from './img/favicon1.png'
-export * from './components/scroll'
+import BackToTopText from './components/BackToTopText'
+
 
 
 
@@ -51,6 +52,7 @@ function App() {
             </ul>
           </nav>
         </header>
+        <BackToTopText/>
         <main id="main">
           <Routes>
             <Route path='/' element={<Home />} />
@@ -61,13 +63,15 @@ function App() {
             <Route path='/work/86' element={<Work2 featuredImage={featuredImage} />} />
             <Route path='/work/84' element={<Work3 featuredImage={featuredImage} />} />
             <Route path='/contact' element={<Contact />} />
+  
           
           </Routes>
         </main>
-        <BackToTopButton/>
+       
+
         <footer className='footer'>
 				  <p className="copyright"><a href="https://www.linkedin.com/feed/"> Created by Aleum Kim</a>.</p>
-          
+   
         </footer>
       </Router>
   );
