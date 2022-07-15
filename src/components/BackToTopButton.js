@@ -26,7 +26,7 @@ function BackToTopButton() {
                <button className="scroll" style={{
                 position: "fixed",
                 bottom: "50px",
-                right: "50px",
+                right: "40px",
                 height: "60px",
                 width: "60px",
                 fontSize: "50px",
