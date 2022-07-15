@@ -899,7 +899,9 @@ a:active {
 		margin-left: 400px;
 		}
 	}
-
+	.site-navigation h3	{
+		font-size: 20px;
+	}
 	#post-13 {
 		margin-top: 50px;
 	}
@@ -1005,7 +1007,12 @@ a:active {
 	.icon {
 		margin-left: auto;
 		margin-right: auto;
-		width: 80%;
+		width: 60%;
+	}
+
+	.logo {
+		position: relative;
+		bottom:20px;
 	}
 
 
@@ -1121,6 +1128,16 @@ a:active {
 	.headshot {
 		position: relative;
 		right:400px;
+	}
+
+	.site-navigation h3	{
+		position: relative;
+		left:130px;
+	}
+
+	.logo {
+		position: relative;
+		right: 100px;
 	}
 
 }
