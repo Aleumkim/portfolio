@@ -52,7 +52,6 @@ function App() {
             </ul>
           </nav>
         </header>
-        <BackToTopText/>
         <main id="main">
           <Routes>
             <Route path='/' element={<Home />} />
@@ -67,11 +66,11 @@ function App() {
           
           </Routes>
         </main>
-       
 
+                  <BackToTopText/>
         <footer className='footer'>
 				  <p className="copyright"><a href="https://www.linkedin.com/feed/"> Created by Aleum Kim</a>.</p>
-   
+          
         </footer>
       </Router>
   );

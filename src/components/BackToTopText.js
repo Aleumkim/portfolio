@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import BackToTopButton from './BackToTopButton';
 
 function BackToTopText() {
-    return <div className='App'>
+    return <div className='App'> 
     <BackToTopButton/>
     </div>;
 }

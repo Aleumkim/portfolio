@@ -517,6 +517,23 @@ footer p {
 	-moz-text-fill-color: transparent;
 }
 
+/*scroll-styling AK*/
+.scroll {
+	background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+	border-color: black;
+	border-radius: 40px;
+	color: lemonchiffon;
+	animation: scrollTop 0.5s alternate infinite;
+}
+@keyframes scrollTop {
+	from {
+		transform: translate(2px);
+	}
+	to {
+		transform: translate(-1px);
+	}
+}
+
 
 
 p.site-title {
